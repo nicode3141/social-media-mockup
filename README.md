@@ -1,6 +1,6 @@
 # Social Media Mockup
 ## Overview
-a replica to preview post, profile pictures and content you wish posting on social media.
+a replica of typical social media sites to preview post, profile pictures and content before publishing to the public
 
 ## 🛠 Tech Stack
 - React JSX
