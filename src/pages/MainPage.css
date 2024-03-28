@@ -1,256 +1,535 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;600;700;800&display=swap');
 
-.MainPageWrapper{
-    width: 100vws;
-    height: 100vh;
-    font-family: "Montserrat", sans-serif;
+
+@media (max-width: 767px) {
+    /*Mobile Design*/
+    .MainPageWrapper{
+        width: 100vws;
+        height: 100vh;
+        font-family: "Montserrat", sans-serif;
+    }
+    
+    .username{
+        padding: 20px 10px 0px 20px;
+        color: #000;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    
+    .avatarInfo{
+        padding: 15px 20px 20px 20px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        gap: 10px;
+    }
+    
+    .userAvatarWrapper{
+        position: relative;
+    }
+    
+    .userAvatar{
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        overflow:hidden;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    
+    .userAvatarInput{
+        z-index: 10;
+        position: absolute;
+        top: 65px;
+        right: 0px;
+        border-radius: 10px;
+        background: #f2f2f2;
+        padding: 5px;
+    }
+    
+    .userAvatarImgUpload{
+        opacity: 0;
+        z-index: 20;
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+    }
+    
+    .userMetrics{
+        display: flex;
+        align-items: center;
+        justify-items: baseline;
+        gap: 20px;
+    }
+    
+    .userMetricWrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2px;
+    }
+    
+    .userStatNum{
+        color: #000;
+        text-align: center;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    
+    .userStatDesc{
+        color: #4E4E4E;
+        text-align: center;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    
+    .userDesc{
+        padding: 0px 20px 10px 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .nameDesc{
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    
+    .userBio{
+        color: #2F2F2F;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    
+    .mockupEditWrapper{
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .mockupEdit{
+        width: 65vw;
+        border-radius: 10px;
+        background: #94C5D9;
+        border: none;
+        padding: 10px;
+        color: #000;
+        text-align: center;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.3px;
+    }
+    
+    .activeEdit{
+        background: #94D99A;
+    }
+    
+    .userContent{
+        padding: 20px 10px 20px 10px;
+    }
+    
+    .contentHeading{
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    
+    .contentArea{
+        margin-top: 20px;
+        border-radius: 10px;
+        background: rgba(217, 217, 217, 0.20);
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .addContent{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .editWrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .formContainer{
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .formFields{
+        padding: 10px 10px 0px 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .formInputHeading, .metricFormHeading{
+        color: #727272;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    
+    .formField{
+        color: #2F2F2F;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 8px 10px 8px 10px;
+        outline: none;
+        background: #E6E6E6;
+        color: #2b2b2b;
+        border: none;
+        border-radius: 10px;
+        transition: .3s ease;
+    }
+    
+    .formMetricFieldWrapper{
+        padding: 10px 10px 0px 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .formMetricFields{
+        padding: 0px 10px 0px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 5vw;
+    }
+    
+    .formMetricField{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .formMetricInput{
+        max-width: 20vw;
+        color: #2F2F2F;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 8px 10px 8px 10px;
+        outline: none;
+        background: #E6E6E6;
+        color: #000000;
+        border: none;
+        border-radius: 10px;
+        transition: .3s ease;
+    }
+    
+    .formMetricDesc{
+        display: flex;
+        justify-content: center;
+        color: #000;
+        text-align: center;
+        font-size: 14px !important;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
 }
 
-.username{
-    padding: 20px 10px 0px 20px;
-    color: #000;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
+@Media (min-width: 768px){
+    .MainPageWrapper{
+        width: 100vws;
+        height: 100vh;
+        font-family: "Montserrat", sans-serif;
+    }
+    
+    .username{
+        width: 10rem;
+        text-align: center;
+        padding: 20px 10px 0px 20px;
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
 
-.avatarInfo{
-    padding: 15px 20px 20px 20px;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    gap: 10px;
-}
+    .userInfoWrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .avatarInfo{
+        padding: 15px 20px 20px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 40px;
+    }
+    
+    .userAvatarWrapper{
+        position: relative;
+    }
+    
+    .userAvatar{
+        width: 125px;
+        height: 125px;
+        border-radius: 100px;
+        overflow:hidden;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    
+    .userAvatarInput{
+        z-index: 10;
+        position: absolute;
+        top: 80px;
+        right: 0px;
+        border-radius: 10px;
+        background: #f2f2f2;
+        padding: 5px;
+    }
+    
+    .userAvatarImgUpload{
+        opacity: 0;
+        z-index: 20;
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+    }
+    
+    .userMetrics{
+        display: flex;
+        align-items: center;
+        justify-items: baseline;
+        gap: 20px;
+    }
+    
+    .userMetricWrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2px;
+    }
+    
+    .userStatNum{
+        color: #000;
+        text-align: center;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    
+    .userStatDesc{
+        color: #4E4E4E;
+        text-align: center;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    
+    .userDesc{
+        padding: 0px 20px 10px 20px;
+        display: flex;
 
-.userAvatarWrapper{
-    position: relative;
-}
-
-.userAvatar{
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-    overflow:hidden;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.userAvatarInput{
-    z-index: 10;
-    position: absolute;
-    top: 65px;
-    right: 0px;
-    border-radius: 10px;
-    background: #f2f2f2;
-    padding: 5px;
-}
-
-.userAvatarImgUpload{
-    opacity: 0;
-    z-index: 20;
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-}
-
-.userMetrics{
-    display: flex;
-    align-items: center;
-    justify-items: baseline;
-    gap: 20px;
-}
-
-.userMetricWrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 2px;
-}
-
-.userStatNum{
-    color: #000;
-    text-align: center;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
-
-.userStatDesc{
-    color: #4E4E4E;
-    text-align: center;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-
-.userDesc{
-    padding: 0px 20px 10px 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-.nameDesc{
-    color: #000;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
-
-.userBio{
-    color: #2F2F2F;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
-
-.mockupEditWrapper{
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.mockupEdit{
-    width: 65vw;
-    border-radius: 10px;
-    background: #94C5D9;
-    border: none;
-    padding: 10px;
-    color: #000;
-    text-align: center;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    letter-spacing: 0.3px;
-}
-
-.activeEdit{
-    background: #94D99A;
-}
-
-.userContent{
-    padding: 20px 10px 20px 10px;
-}
-
-.contentHeading{
-    color: #000;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
-
-.contentArea{
-    margin-top: 20px;
-    border-radius: 10px;
-    background: rgba(217, 217, 217, 0.20);
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.addContent{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.editWrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.formContainer{
-    width: 90vw;
-    display: flex;
-    flex-direction: column;
-}
-
-.formFields{
-    padding: 10px 10px 0px 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.formInputHeading, .metricFormHeading{
-    color: #727272;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
-
-.formField{
-    color: #2F2F2F;
-    font-size: 16px;
-    font-weight: 600;
-	padding: 8px 10px 8px 10px;
-	outline: none;
-	background: #E6E6E6;
-	color: #2b2b2b;
-    border: none;
-	border-radius: 10px;
-	transition: .3s ease;
-}
-
-.formMetricFieldWrapper{
-    padding: 10px 10px 0px 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.formMetricFields{
-    padding: 0px 10px 0px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 5vw;
-}
-
-.formMetricField{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.formMetricInput{
-    max-width: 20vw;
-    color: #2F2F2F;
-    font-size: 16px;
-    font-weight: 600;
-	padding: 8px 10px 8px 10px;
-	outline: none;
-	background: #E6E6E6;
-	color: #000000;
-    border: none;
-	border-radius: 10px;
-	transition: .3s ease;
-}
-
-.formMetricDesc{
-    display: flex;
-    justify-content: center;
-    color: #000;
-    text-align: center;
-    font-size: 14px !important;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+        max-width: 20rem;
+        flex-direction: column;
+    }
+    
+    .nameDesc{
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    
+    .userBio{
+        color: #2F2F2F;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    
+    .mockupEditWrapper{
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .mockupEdit{
+        width: 15vw;
+        border-radius: 10px;
+        background: #94C5D9;
+        border: none;
+        padding: 10px;
+        color: #000;
+        text-align: center;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.3px;
+    }
+    
+    .activeEdit{
+        background: #94D99A;
+    }
+    
+    .userContent{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 10px 20px 10px;
+        min-width: 90vw;
+    }
+    
+    .contentHeading{
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    
+    .contentArea{
+        min-width: 90vw;
+        margin-top: 20px;
+        border-radius: 10px;
+        background: rgba(217, 217, 217, 0.20);
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .addContent{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .editWrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .formContainer{
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .formFields{
+        padding: 10px 10px 0px 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .formInputHeading, .metricFormHeading{
+        color: #727272;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    
+    .formField{
+        color: #2F2F2F;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 8px 10px 8px 10px;
+        outline: none;
+        background: #E6E6E6;
+        color: #2b2b2b;
+        border: none;
+        border-radius: 10px;
+        transition: .3s ease;
+    }
+    
+    .formMetricFieldWrapper{
+        padding: 10px 10px 0px 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .formMetricFields{
+        padding: 0px 10px 0px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 5vw;
+    }
+    
+    .formMetricField{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .formMetricInput{
+        max-width: 20vw;
+        color: #2F2F2F;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 8px 10px 8px 10px;
+        outline: none;
+        background: #E6E6E6;
+        color: #000000;
+        border: none;
+        border-radius: 10px;
+        transition: .3s ease;
+    }
+    
+    .formMetricDesc{
+        display: flex;
+        justify-content: center;
+        color: #000;
+        text-align: center;
+        font-size: 14px !important;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
 }
